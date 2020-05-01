@@ -1,0 +1,13 @@
+D:\Test\ChocoAn\bin\Debug\ChocoAn.exe.config
+D:\Test\ChocoAn\bin\Debug\ChocoAn.exe
+D:\Test\ChocoAn\bin\Debug\ChocoAn.pdb
+D:\Test\ChocoAn\bin\Debug\MetroFramework.dll
+D:\Test\ChocoAn\bin\Debug\MetroFramework.Fonts.dll
+D:\Test\ChocoAn\obj\Debug\ChocoAn.MainForm.resources
+D:\Test\ChocoAn\obj\Debug\ChocoAn.LoginForm.resources
+D:\Test\ChocoAn\obj\Debug\ChocoAn.Properties.Resources.resources
+D:\Test\ChocoAn\obj\Debug\ChocoAn.csproj.GenerateResource.cache
+D:\Test\ChocoAn\obj\Debug\ChocoAn.csproj.CoreCompileInputs.cache
+D:\Test\ChocoAn\obj\Debug\ChocoAn.csproj.CopyComplete
+D:\Test\ChocoAn\obj\Debug\ChocoAn.exe
+D:\Test\ChocoAn\obj\Debug\ChocoAn.pdb
