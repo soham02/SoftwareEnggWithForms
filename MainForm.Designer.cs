@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.metroButton12 = new MetroFramework.Controls.MetroButton();
+            this.metroButton11 = new MetroFramework.Controls.MetroButton();
+            this.metroButton8 = new MetroFramework.Controls.MetroButton();
+            this.metroButton9 = new MetroFramework.Controls.MetroButton();
+            this.metroButton10 = new MetroFramework.Controls.MetroButton();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.metroButton7 = new MetroFramework.Controls.MetroButton();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
@@ -42,6 +47,7 @@
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPage4.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -52,6 +58,11 @@
             // 
             // metroTabPage4
             // 
+            this.metroTabPage4.Controls.Add(this.metroButton12);
+            this.metroTabPage4.Controls.Add(this.metroButton11);
+            this.metroTabPage4.Controls.Add(this.metroButton8);
+            this.metroTabPage4.Controls.Add(this.metroButton9);
+            this.metroTabPage4.Controls.Add(this.metroButton10);
             this.metroTabPage4.HorizontalScrollbarBarColor = true;
             this.metroTabPage4.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage4.Name = "metroTabPage4";
@@ -59,6 +70,50 @@
             this.metroTabPage4.TabIndex = 3;
             this.metroTabPage4.Text = "Reports";
             this.metroTabPage4.VerticalScrollbarBarColor = true;
+            this.metroTabPage4.Click += new System.EventHandler(this.metroTabPage4_Click);
+            // 
+            // metroButton12
+            // 
+            this.metroButton12.Location = new System.Drawing.Point(3, 139);
+            this.metroButton12.Name = "metroButton12";
+            this.metroButton12.Size = new System.Drawing.Size(228, 23);
+            this.metroButton12.TabIndex = 13;
+            this.metroButton12.Text = "Accounts Payable";
+            this.metroButton12.Click += new System.EventHandler(this.metroButton12_Click);
+            // 
+            // metroButton11
+            // 
+            this.metroButton11.Location = new System.Drawing.Point(3, 110);
+            this.metroButton11.Name = "metroButton11";
+            this.metroButton11.Size = new System.Drawing.Size(228, 23);
+            this.metroButton11.TabIndex = 12;
+            this.metroButton11.Text = "Provider Reports";
+            // 
+            // metroButton8
+            // 
+            this.metroButton8.Location = new System.Drawing.Point(3, 52);
+            this.metroButton8.Name = "metroButton8";
+            this.metroButton8.Size = new System.Drawing.Size(228, 23);
+            this.metroButton8.TabIndex = 11;
+            this.metroButton8.Text = "Main Accounting";
+            this.metroButton8.Click += new System.EventHandler(this.metroButton8_Click_1);
+            // 
+            // metroButton9
+            // 
+            this.metroButton9.Location = new System.Drawing.Point(3, 81);
+            this.metroButton9.Name = "metroButton9";
+            this.metroButton9.Size = new System.Drawing.Size(228, 23);
+            this.metroButton9.TabIndex = 10;
+            this.metroButton9.Text = "Member Reports";
+            // 
+            // metroButton10
+            // 
+            this.metroButton10.Location = new System.Drawing.Point(3, 23);
+            this.metroButton10.Name = "metroButton10";
+            this.metroButton10.Size = new System.Drawing.Size(228, 23);
+            this.metroButton10.TabIndex = 9;
+            this.metroButton10.Text = "Download Service Directory";
+            this.metroButton10.Click += new System.EventHandler(this.metroButton10_Click_1);
             // 
             // metroTabPage3
             // 
@@ -182,13 +237,13 @@
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage3);
-            this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
+            this.metroTabControl1.Controls.Add(this.metroTabPage2);
+            this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 3;
             this.metroTabControl1.Size = new System.Drawing.Size(760, 468);
             this.metroTabControl1.TabIndex = 0;
             // 
@@ -202,6 +257,7 @@
             this.Text = "ChocoAn";
             this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.metroTabPage4.ResumeLayout(false);
             this.metroTabPage3.ResumeLayout(false);
             this.metroTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -228,6 +284,11 @@
         private MetroFramework.Controls.MetroButton metroButton1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
+        private MetroFramework.Controls.MetroButton metroButton12;
+        private MetroFramework.Controls.MetroButton metroButton11;
+        private MetroFramework.Controls.MetroButton metroButton8;
+        private MetroFramework.Controls.MetroButton metroButton9;
+        private MetroFramework.Controls.MetroButton metroButton10;
     }
 }
 

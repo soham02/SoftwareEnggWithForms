@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ChocoAn
 {
@@ -93,6 +94,96 @@ namespace ChocoAn
         {
             FormServiceRecord serviceReord = new FormServiceRecord();
             serviceReord.ShowDialog();
+        }
+
+        private void metroButton10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton10_Click_1(object sender, EventArgs e)
+        {
+            DataSet1TableAdapters.ServiceDirectoryTBLTableAdapter adap = new DataSet1TableAdapters.ServiceDirectoryTBLTableAdapter();
+            DataTable dt = adap.GetData();
+
+            string filename = @"D:\Test\ServiceDirectory.txt";
+            dt.ToCSV(filename);
+
+            MessageBox.Show("Records Created");
+        }
+
+        private void metroTabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton8_Click_1(object sender, EventArgs e)
+        {
+            DataSet1TableAdapters.ServiceRecordTBLTableAdapter adap = new DataSet1TableAdapters.ServiceRecordTBLTableAdapter();
+            DataTable dt = adap.GetData();
+
+            string filename = @"D:\Test\MainAccounting.txt";
+            dt.ToCSV(filename);
+
+            MessageBox.Show("Records Created");
+        }
+    }
+
+    public static class CSVUtlity
+    {
+        public static void ToCSV(this DataTable dtDataTable, string strFilePath)
+        {
+            StreamWriter sw = new StreamWriter(strFilePath, false);
+            //headers  
+            for (int i = 0; i < dtDataTable.Columns.Count; i++)
+            {
+                sw.Write(dtDataTable.Columns[i]);
+                if (i < dtDataTable.Columns.Count - 1)
+                {
+                    sw.Write(",");
+                }
+            }
+            sw.Write(sw.NewLine);
+            foreach (DataRow dr in dtDataTable.Rows)
+            {
+                for (int i = 0; i < dtDataTable.Columns.Count; i++)
+                {
+                    if (!Convert.IsDBNull(dr[i]))
+                    {
+                        string value = dr[i].ToString();
+                        if (value.Contains(','))
+                        {
+                            value = String.Format("\"{0}\"", value);
+                            sw.Write(value);
+                        }
+                        else
+                        {
+                            sw.Write(dr[i].ToString());
+                        }
+                    }
+                    if (i < dtDataTable.Columns.Count - 1)
+                    {
+                        sw.Write(",");
+                    }
+                }
+                sw.Write(sw.NewLine);
+            }
+            sw.Close();
         }
     }
 } 
