@@ -13,6 +13,8 @@ namespace ChocoAn
     public partial class LoginForm : Form
     {
         public bool loginFlag { get; set; }
+
+        public int UserID { get; set; }
         public LoginForm()
         {
             InitializeComponent();
@@ -49,6 +51,7 @@ namespace ChocoAn
                 //valid
                 MessageBox.Show("Login Successful");
                 loginFlag = true;
+                UserID = int.Parse(dt.Rows[0]["ID"].ToString()); 
 
 
             }
@@ -64,6 +67,9 @@ namespace ChocoAn
 
         }
 
-        
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

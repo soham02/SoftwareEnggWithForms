@@ -56,10 +56,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddMembers.Designer.cs">
+      <DependentUpon>FormAddMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddProvider.Designer.cs">
+      <DependentUpon>FormAddProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeleteMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeleteMember.Designer.cs">
+      <DependentUpon>FormDeleteMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeleteProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeleteProvider.Designer.cs">
+      <DependentUpon>FormDeleteProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServiceRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServiceRecord.Designer.cs">
+      <DependentUpon>FormServiceRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateMember.Designer.cs">
+      <DependentUpon>FormUpdateMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateProvider.Designer.cs">
+      <DependentUpon>FormUpdateProvider.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -75,6 +120,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddMembers.resx">
+      <DependentUpon>FormAddMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddProvider.resx">
+      <DependentUpon>FormAddProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeleteMember.resx">
+      <DependentUpon>FormDeleteMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeleteProvider.resx">
+      <DependentUpon>FormDeleteProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServiceRecord.resx">
+      <DependentUpon>FormServiceRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateMember.resx">
+      <DependentUpon>FormUpdateMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateProvider.resx">
+      <DependentUpon>FormUpdateProvider.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

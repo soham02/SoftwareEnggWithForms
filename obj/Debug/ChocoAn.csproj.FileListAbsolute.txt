@@ -11,3 +11,11 @@ D:\Test\ChocoAn\obj\Debug\ChocoAn.csproj.CoreCompileInputs.cache
 D:\Test\ChocoAn\obj\Debug\ChocoAn.csproj.CopyComplete
 D:\Test\ChocoAn\obj\Debug\ChocoAn.exe
 D:\Test\ChocoAn\obj\Debug\ChocoAn.pdb
+D:\Test\ChocoAn\obj\Debug\ChocoAn.csprojAssemblyReference.cache
+D:\Test\ChocoAn\obj\Debug\ChocoAn.FormAddMembers.resources
+D:\Test\ChocoAn\obj\Debug\ChocoAn.FormUpdateMember.resources
+D:\Test\ChocoAn\obj\Debug\ChocoAn.FormDeleteMember.resources
+D:\Test\ChocoAn\obj\Debug\ChocoAn.FormAddProvider.resources
+D:\Test\ChocoAn\obj\Debug\ChocoAn.FormDeleteProvider.resources
+D:\Test\ChocoAn\obj\Debug\ChocoAn.FormUpdateProvider.resources
+D:\Test\ChocoAn\obj\Debug\ChocoAn.FormServiceRecord.resources
