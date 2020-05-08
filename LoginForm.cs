@@ -43,15 +43,14 @@ namespace ChocoAn
 
         private void metroButtonLogin_Click(object sender, EventArgs e)
         {
-            DataSet1TableAdapters.IdNumbersTableAdapter IDAda = new DataSet1TableAdapters.IdNumbersTableAdapter();
-            DataTable dt = IDAda .GetDataByIDNumber (metroTextBoxIdNumber.Text);
+            DataSet1TableAdapters.ProviderTBL1TableAdapter IDAda = new DataSet1TableAdapters.ProviderTBL1TableAdapter();
+            DataTable dt = IDAda.GetDataByProviderNumber (Convert.ToInt32(metroTextBoxIdNumber.Text));
 
             if(dt.Rows.Count > 0)
             {
                 //valid
                 MessageBox.Show("Login Successful");
                 loginFlag = true;
-                UserID = int.Parse(dt.Rows[0]["ID"].ToString()); 
 
 
             }

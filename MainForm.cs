@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Threading;
 
 namespace ChocoAn
 {
@@ -139,6 +140,119 @@ namespace ChocoAn
 
             string filename = @"D:\Test\MainAccounting.txt";
             dt.ToCSV(filename);
+
+            MessageBox.Show("Records Created");
+        }
+
+        private void metroButton9_Click_1(object sender, EventArgs e)
+        {            
+            DataSet1TableAdapters.MembersTBL1TableAdapter ada = new DataSet1TableAdapters.MembersTBL1TableAdapter();
+            DataTable dt = ada.GetData();
+            
+            int number = dt.Rows.Count;
+            
+            for (int i = 0; i < number; i++)                
+            {
+                int service = 0;
+                
+                int currentMember = 100000000 + i;
+                DataTable dt1 = ada.GetDataByMemberNumber(currentMember);
+
+                string filestart = @"D:\Test\";
+                string nameValue = dt1.Rows[0][1].ToString();
+                string under = "_";
+                string date = DateTime.Today.ToString("dd-MM-yyyy");
+                string txt = ".txt";
+                string final = filestart + nameValue + under + date + txt;
+                dt1.ToCSV(final);
+
+                DataSet1TableAdapters.ServiceRecordTBL1TableAdapter adap = new DataSet1TableAdapters.ServiceRecordTBL1TableAdapter();
+                DataTable dt2 = adap.GetData();
+                int number1 = dt2.Rows.Count;
+
+                for (int j = 0; j < number1; j++)
+                {
+                    int id = 21 + j;
+                    DataTable dt3 = adap.GetDataByID(id);
+                                        
+                    int member = Convert.ToInt32(dt3.Rows[0][1]);
+
+                    if (member == currentMember)
+                    {
+                        DataTable dt4 = adap.GetDataByMemberNumber(currentMember);                                        
+                        dt4.ToCSV(final);
+                        service++;
+                    }
+                    if(service == 0)
+                    {
+                        //No service recorded
+                    }
+                }                
+            }
+                      
+            MessageBox.Show("Records Created");
+        }
+
+        private void metroButton11_Click(object sender, EventArgs e)
+        {
+            DataSet1TableAdapters.ProviderTBL1TableAdapter ada = new DataSet1TableAdapters.ProviderTBL1TableAdapter();
+            DataTable dt = ada.GetData();
+
+            int number = dt.Rows.Count;
+
+            for (int i = 0; i < number; i++)
+            {
+                int service = 0;
+
+                int currentProvider = 900000000 + i;
+                DataTable dt1 = ada.GetDataByProviderNumber(currentProvider);
+
+                string filestart = @"D:\Test\";
+                string nameValue = dt1.Rows[0][1].ToString();
+                string under = "_";
+                string date = DateTime.Today.ToString("dd-MM-yyyy");
+                string txt = ".txt";
+                string final = filestart + nameValue + under + date + txt;
+                dt1.ToCSV(final);
+
+                DataSet1TableAdapters.ServiceRecordTBL2TableAdapter adap = new DataSet1TableAdapters.ServiceRecordTBL2TableAdapter();
+                DataTable dt2 = adap.GetData();
+                int number1 = dt2.Rows.Count;
+
+                for (int j = 0; j < number1; j++)
+                {
+                    int id = 21 + j;
+                    DataTable dt3 = adap.GetDataByID(id);
+
+                    int provider = Convert.ToInt32(dt3.Rows[0][2]);
+                    String services = dt3.Rows[0][3].ToString();
+
+
+                    //Fees 
+                    DataSet1TableAdapters.ServiceDirectoryTBLTableAdapter adapa = new DataSet1TableAdapters.ServiceDirectoryTBLTableAdapter();
+                    DataTable dt4 = adapa.GetDataByServiceNumber(services);
+
+                    double fees = Convert.ToInt32(dt4.Rows[0][1].ToString()); 
+
+                    
+
+                    if (provider == currentProvider)
+                    {
+                        DataTable dt5 = adap.GetDataByProviderNumber(currentProvider);
+                        dt5.ToCSV(final);
+                        service++;
+                    }
+                    if (service == 0)
+                    {
+                        //No service recorded
+                    }
+                }
+            }
+            //DataSet1TableAdapters.ProviderReportTableAdapter adap = new DataSet1TableAdapters.ProviderReportTableAdapter();
+            //DataTable dt = adap.GetData();
+
+            //string filename = @"D:\Test\ProviderReports.txt";
+            //dt.ToCSV(filename);
 
             MessageBox.Show("Records Created");
         }
